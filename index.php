@@ -9,7 +9,8 @@
 </head>
 <body>
     <header>
-        <h1 class="w-full">Der Solitär Spider Löser! test</h1>
+        <h1 class="w-full">Der Solitär Spider Löser!</h1>
+        <button class="border ml-1 px-4 py-2 rounded-md bg-orange-500 border-transparent text-gray-200" onclick="clearCache()">Bereinigen</button>
     </header>
     <main>
         <div class="flex flex-row">
@@ -25,8 +26,13 @@
     </main>
     <template id="cardTemplate">
         <div class="card border-x border-t mb-1 rounded-t-md p-3">
+            <span class="card-icon"></span>
             <input class="w-full card-title">
         </div>
+    </template>
+    <template>
+        <p class="hidden"></p>
+        <p class="text-5xl block text-rose-600"></p>
     </template>
 </body>
 </html>

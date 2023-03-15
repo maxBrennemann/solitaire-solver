@@ -3,7 +3,7 @@ import { Pile } from "./js/Pile.js";
 import { Tile } from "./js/Tile.js";
 import { Path } from "./js/Path.js";
 
-var game = {};
+window.game = {};
 
 if (document.readyState !== 'loading' ) {
     init();
@@ -34,13 +34,17 @@ function init() {
             const container = template.content.cloneNode(true);
             const title = container.querySelector(".card-title");
             title.placeholder = "Karten";
-            title.addEventListener("change", (e) => {
 
-            });
-            anchor.appendChild(container);
+            const wrapper = document.createElement("div");
+            wrapper.appendChild(container);
+            anchor.appendChild(wrapper);
 
-            const tile = new Tile(container);
+            const tile = new Tile(wrapper);
             pile.addTile(tile);
         }
     }
+}
+
+function clearCache() {
+    
 }
