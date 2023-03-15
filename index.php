@@ -11,6 +11,7 @@
     <header>
         <h1 class="w-full">Der Solitär Spider Löser!</h1>
         <button class="border ml-1 px-4 py-2 rounded-md bg-orange-500 border-transparent text-gray-200" onclick="clearCache()">Bereinigen</button>
+        <button class="border ml-1 px-4 py-2 rounded-md bg-orange-500 border-transparent text-gray-200" onclick="solve()">Lösen</button>
     </header>
     <main>
         <div class="flex flex-row">

@@ -46,5 +46,9 @@ function init() {
 }
 
 function clearCache() {
-    
+
+}
+
+function solve() {
+    window.game.solver.solve();
 }

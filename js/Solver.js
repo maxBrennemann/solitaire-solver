@@ -1,6 +1,6 @@
 export class Solver {
 
-    constructor(tiles) {
+    constructor() {
         this.piles = [];
     }
 
@@ -9,8 +9,8 @@ export class Solver {
     }
 
     solve() {
-        this.piles.forEach(tile => {
-            tile.match(this.getUpperTiles());
+        this.piles.map(pile => {
+            return pile.getMovables();
         });
     }
 
