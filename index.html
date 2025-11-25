@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Soltär Löser</title>
     <script src="main.js" type="module"></script>
+    <link href="output.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -11,14 +12,29 @@
         <h1 class="w-full">Der Solitär Spider Löser!</h1>
     </header>
     <main>
-        <div id="cardContainer"></div>
-        <div id="placeholders"></div>
+        <div id="cardContainer" class="grid grid-cols-10 gap-2"></div>
+        <div id="placeholders" class="grid grid-cols-10 gap-2 mt-2"></div>
+        <button id="add" class="btn-primary">Hinzufügen</button>
+        <button id="newRow" class="btn-primary">Neue Reihe</button>
+        <button id="solve" class="btn-primary">Lösen</button>
     </main>
     <template id="placeholderTemplate">
-        <div>
-            <input type="checkbox">
-            <input name="cardType">
-            <input name="cardNumber">
+        <div class="bg-gray-100 rounded-md p-2">
+            <input type="checkbox" checked>
+            <select name="suit" class="input-primary">
+                <option value="none" selected></option>
+                <option value="hearts">♥️ Herzen</option>
+                <option value="diamonds">♦️ Karo</option>
+                <option value="clubs">♣️ Kreuz</option>
+                <option value="spades">♠️ Pik</option>
+            </select>
+            <input name="cardNumber" class="input-primary">
+        </div>
+    </template>
+    <template id="cardTemplate">
+        <div class="bg-gray-100 rounded-md p-2 shadow-md mt-1 h-12">
+            <span class="text-xl font-bold cardNumber"></span>
+            <span class="text-3xl cardSuit"></span>
         </div>
     </template>
 </body>

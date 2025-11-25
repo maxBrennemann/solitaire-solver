@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-primary {
+        @apply inline-flex items-center justify-center font-sans font-semibold leading-5 py-1.5 px-2.5 my-1 bg-green-500 rounded text-sm border-0 text-white hover:bg-green-700 disabled:bg-green-200 disabled:hover:bg-green-300 disabled:hover:cursor-not-allowed active:scale-95 transition-transform duration-75;
+    }
+
+    .input-primary {
+        @apply w-10 h-8 px-2.5 py-1 my-1 rounded ring-1 ring-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+    }
+}
